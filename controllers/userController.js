@@ -1,12 +1,17 @@
 const User = require("../Models/User");
+const Thought = require("../Models/Thought");
 
 async function getAllUsers(req, res) {
-  const response = await User.find({});
+  const response = await User.find({}).populate({
+    path: "thoughts"
+  })
   console.log(response);
   res.json(response);
 }
 async function getUserById(req, res) {
-  const response = await User.findById(req.params.id);
+  const response = await User.findById(req.params.id).populate({
+    path: "thoughts"
+  })
   console.log(response);
   res.json(response);
 }
@@ -23,7 +28,7 @@ async function updateUserById(req, res) {
   const userId = req.params.id;
   const updateData = req.body;
   console.log(userId, req.body);
-  const response = await User.findOneAndUpdate({ _id: userId }, updateData, {
+  const response = await User.findOneAndUpdate({ _id: userId }, {$set: updateData}, {
     new: true,
     runValidators: true,
   });
