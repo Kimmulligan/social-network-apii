@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://kiim:Chillyshark386@social-network-api.fblqv.mongodb.net/social-network-api?retryWrites=true&w=majority",
-  {
+
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
 );
+
 mongoose.set('debug', true);
 const db = mongoose.connection;
 db.on("error", () => {
