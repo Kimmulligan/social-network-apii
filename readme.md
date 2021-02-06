@@ -1,9 +1,3 @@
-
-  ![issues badge](https://img.shields.io/github/issues/social-network-apii/kimmulligan)
-    ![forks badge](https://img.shields.io/github/forks/social-network-apii/kimmulligan)
-    ![stars badge](https://img.shields.io/github/stars/social-network-apii/kimmulligan)
-    ![licence badge](https://img.shields.io/github/licence/social-network-apii/kimmulligan)
-
 ## Video Walk Through
 https://drive.google.com/file/d/1YbzGWPdY8NMPJfGy9wzDkrxTmgBafH-v/view?usp=sharing
 
